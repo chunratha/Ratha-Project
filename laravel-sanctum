@@ -103,10 +103,7 @@ Step 11: Test with postman, Result will be below
  
  Step 11: Make Details API or any other with secure route
  
-       Route::group(['middleware' => 'auth:sanctum'], function(){
-          //All secure URL's
-
-          });
+       use App\Http\Controllers\UserController;
 
 
       Route::post("login",[UserController::class,'index']);
