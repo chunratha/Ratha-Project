@@ -92,8 +92,8 @@ Step 11: Test with postman, Result will be below
         {
             "user": {
                 "id": 1,
-                "name": "John Doe",
-                "email": "john@doe.com",
+                "name": "David Ma",
+                "email": "david@gmail.com",
                 "email_verified_at": null,
                 "created_at": null,
                 "updated_at": null
