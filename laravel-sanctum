@@ -20,7 +20,7 @@ Step 4:Run your database migrations.
 
         php artisan migrate
   
-Step 5:Add the Sanctum's middleware.
+Step 5:Add the Sanctum's middleware.(app/http/Kernel.php)
 
         'api' => [
           \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
