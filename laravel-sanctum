@@ -48,8 +48,8 @@ Step 5:Add the Sanctum's middleware.
         use Illuminate\Support\Facades\Hash;
 
         DB::table('users')->insert([
-            'name' => 'John Doe',
-            'email' => 'john@doe.com',
+            'name' => 'David Ma',
+            'email' => 'david@gmail.com',
             'password' => Hash::make('password')
         ]);
     
