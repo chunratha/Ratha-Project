@@ -67,7 +67,7 @@ Step 10: create a controller nad /login route in the routes/api.php file:
         class UserController extends Controller
         {
             //
-            function index(){
+            function index(Request $request){
                 $user= User::where('email', $request->email)->first();
                 // print_r($data);
                     if (!$user || !Hash::check($request->password, $user->password)) {
