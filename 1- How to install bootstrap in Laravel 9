@@ -8,8 +8,12 @@
     cd laravel-bootstrap
   
 2-Install Laravel/UI
+    Laravel UI is an official library that offers selective or predefined UI components. 
+    The laravel/ui package comes with the login and registration scaffolding for React, Vue, jQuery, and Bootstrap layouts.
 
-    composer require laravel/ui
+    Run the command to install Laravel/UI.
+    
+     composer require laravel/ui
 
 3- Install Bootstrap in Laravel
 
