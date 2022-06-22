@@ -9,20 +9,29 @@
   
 2-Install Laravel/UI
     Laravel UI is an official library that offers selective or predefined UI components. 
-    The laravel/ui package comes with the login and registration scaffolding for React, Vue, jQuery, and Bootstrap layouts.
+    The laravel/ui package comes with the login and registration scaffolding for 
+    React, Vue, jQuery, and Bootstrap layouts.
 
     Run the command to install Laravel/UI.
     
      composer require laravel/ui
 
 3- Install Bootstrap in Laravel
+    We have successfully installed a laravel/ui package using Composer, now in this step, 
+    we will understand how to easily install the Bootstrap 4 CSS Framework using the following command.
+
+    Run command to install Bootstrap in Laravel project
 
     php artisan ui bootstrap
 
 4- Install Bootstrap Auth Scaffolding
-
+    Execute the following command to Install the auth scaffoldings with Bootstrap
+    
     php artisan ui bootstrap --auth
 
+    We have successfully installed the bootstrap, and you can make sure by going to resource/js/bootstrap.js. 
+    You will see that popper.js and jQuery have been added to the bootstrap’s JavaScript file.
+    
 5- Install Bootstrap Packages
     Before you install Bootstrap Package, you need to check have installed Node js or not.
     - Run this command in command prompt to check
@@ -33,7 +42,8 @@
     - Install the bootstrap package
       npm install
  6- Compile Assets
-    As we can see, resources/sass folder _variables.scss and app.scss files have added along with sass variables and fonts.
+    As we can see, resources/sass folder _variables.scss and app.scss files have added along 
+    with sass variables and fonts.
   
     @import url('https://fonts.googleapis.com/css?family=Nunito');
     // Variables
@@ -54,7 +64,8 @@
 
     - Automate SASS and JS Changes
 
-    If you are lazy and don’t want to run the npm run dev command every time you make changes in SASS and JS file, you should use the following command.
+    If you are lazy and don’t want to run the npm run dev command every time you make changes in SASS and JS file,
+    you should use the following command.
 
        npm run watch
 
