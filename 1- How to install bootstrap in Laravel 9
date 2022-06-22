@@ -1,0 +1,79 @@
+1- create laravel project
+    - composer create-project laravel/laravel --prefer-dist l9-bootstrap
+    or
+    - laravel new l9-bootstrap
+
+    Get inside l9-bootstrap.
+
+    cd laravel-bootstrap
+  
+2-Install Laravel/UI
+
+    composer require laravel/ui
+
+3- Install Bootstrap in Laravel
+
+    php artisan ui bootstrap
+
+4- Install Bootstrap Auth Scaffolding
+
+    php artisan ui bootstrap --auth
+
+5- Install Bootstrap Packages
+    Before you install Bootstrap Package, you need to check have installed Node js or not.
+    - Run this command in command prompt to check
+      # for node
+      node -v
+      # for npm
+      npm -v
+    - Install the bootstrap package
+      npm install
+ 6- Compile Assets
+    As we can see, resources/sass folder _variables.scss and app.scss files have added along with sass variables and fonts.
+  
+    @import url('https://fonts.googleapis.com/css?family=Nunito');
+    // Variables
+    @import 'variables';
+    // Bootstrap
+    @import '~bootstrap/scss/bootstrap';
+ 
+ Now, we have to run the below command for asset compilation.
+ 
+    # for development
+    npm run dev
+
+    # for production
+    npm run production
+ 
+    The above command compiles CSS and JavaScript files from resources/js and resources/sass folder to the public folder.
+
+
+    - Automate SASS and JS Changes
+
+    If you are lazy and don’t want to run the npm run dev command every time you make changes in SASS and JS file, you should use the following command.
+
+       npm run watch
+
+
+    It keeps an eye on your files and compiles the code automatically if detects any change made in SASS and JS files.
+
+
+ 
+ 7- Using Bootstrap in Laravel Blade Template
+
+Now, sass files are complied to single CSS file inside the public folder, and we can define the js and 
+CSS path and use the Bootstrap js and CSS in the Laravel blade template.
+
+ <div class="card">
+        <div class="card-body">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
