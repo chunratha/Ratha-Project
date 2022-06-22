@@ -1,0 +1,47 @@
+1- Introduction
+
+Node.js is a JavaScript run-time environment which includes everything you need to execute a program written in JavaScript. 
+It’s used for running scripts on the server to render content before it is delivered to a web browser.
+NPM stands for Node Package Manager, which is an application and repository for developing and sharing JavaScript code. 
+It’s you to install software (bootstrap package, libraries, plugins, framework, and applications).
+
+2- How to Install Node.js and NPM on Windows
+
+Download: https://nodejs.org/en/download/
+Verify Installation
+- Open a command prompt (or PowerShell), and enter the following:
+  node –v
+- The system should display the Node.js version installed on your system. You can do the same for NPM:
+  npm -v
+  
+3- How to Update Node.js and NPM on Windows
+
+Just download a new version and install it
+
+4- How to Uninstall Node.js and NPM on Windows
+
+- Click the Start button > Settings (gear icon) >  Apps.
+- Scroll down to find Node.js and click to highlight.
+- Select Uninstall. This launches a wizard to uninstall the software
+
+5- Basic Node.js Usage
+Node.js is a framework, which means that it doesn’t work as a normal application. 
+Instead, it interprets commands that you write. To test your new Node.js installation, create a Hello World script.
+
+ var http = require('http');
+ http.createServer(function (req, res) {
+   res.writeHead(200, {'Content-Type': 'text/html'});
+   res.end('Hello World!');
+ }).listen(8080);
+
+- Save the file, then exit. Open the PowerShell, and enter the following:
+  node \users\<your_username>\myprogram.js
+  Example open powershell 
+	node C:\Users\Dell\Desktop\mynode.js
+- It will look like nothing has happened. In reality, your script is running in the background. 
+You may see a Windows Defender notice about allowing traffic – for now, click Allow.
+Next, open a web browser, and enter the following into the address bar:
+http://localhost:8080
+
+
+
