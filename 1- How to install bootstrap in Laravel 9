@@ -5,7 +5,7 @@
 
     Get inside l9-bootstrap.
 
-    cd laravel-bootstrap
+    cd l9-bootstrap
   
 2-Install Laravel/UI
     Laravel UI is an official library that offers selective or predefined UI components. 
