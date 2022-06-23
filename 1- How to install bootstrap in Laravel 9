@@ -18,7 +18,7 @@
 
 3- Install Bootstrap in Laravel
     We have successfully installed a laravel/ui package using Composer, now in this step, 
-    we will understand how to easily install the Bootstrap 4 CSS Framework using the following command.
+    we will understand how to easily install the Bootstrap lastest CSS Framework using the following command.
 
     Run command to install Bootstrap in Laravel project
 
@@ -78,7 +78,11 @@
 
 Now, sass files are complied to single CSS file inside the public folder, and we can define the js and 
 CSS path and use the Bootstrap js and CSS in the Laravel blade template.
-
+ </head> 
+      <script src="{{ asset('js/app.js') }}" defer></script>
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ </head>
+ <body>
  <div class="card">
         <div class="card-body">
 
@@ -92,3 +96,4 @@ CSS path and use the Bootstrap js and CSS in the Laravel blade template.
             </div>
         </div>
     </div>
+ </body>
