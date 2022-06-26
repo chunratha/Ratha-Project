@@ -1,1 +1,14 @@
 Step 1: Install Laravel App
+  composer create-project --prefer-dist laravel/laravel qr_project_advance
+  Go into the app:
+  cd qr_project_advance
+Step 2: Connect App to Database
+  DB_CONNECTION=mysql
+  DB_HOST=127.0.0.1
+  DB_PORT=3306
+  DB_DATABASE=database_name
+  DB_USERNAME=database_user_name
+  DB_PASSWORD=database_password
+
+Step 3: Configure qrcode Package in Laravel
+Now install simple-qrcode package for qr code generator using running below command.
