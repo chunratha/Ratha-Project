@@ -11,4 +11,45 @@ Step 2: Connect App to Database
   DB_PASSWORD=database_password
 
 Step 3: Configure qrcode Package in Laravel
-Now install simple-qrcode package for qr code generator using running below command.
+  Now install simple-qrcode package for qr code generator using running below command.
+
+  composer require simplesoftwareio/simple-qrcode
+
+  pdate config/app.php file with below service provider and aliase.
+  
+    'providers' => [
+    SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
+    ],
+
+    'aliases' => [
+    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
+    ],
+Step 4: Add Routes
+Route::get('qrcode', 'QRController@generateQrCode');
+
+Step 5: Create Controller
+
+php artisan make:controller QRController
+
+<?php
+namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+class QrCodeController extends Controller
+{
+    public function generateQrCode() 
+    {
+        \QrCode::size(500)
+                ->format('png')
+                ->generate('codingdriver.com', public_path('images/qrcode.png'));
+        
+        return view('qr-code');
+    }
+}
+
+Step 7: Run Development Server
+
+php artisan serve
+http://127.0.0.1:8000/generate-qrcode
+Note: If you hit the url you will get “You need to install the imagick extension to use this back end” error, 
+so now you need to install imagick in your system. 
+If you are using window then you need to add the php_imagick.dill package inside the php ext.
