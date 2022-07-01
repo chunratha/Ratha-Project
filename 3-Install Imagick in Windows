@@ -1,0 +1,16 @@
+1- Pre-installation
+  - Php version
+  - Architecture (64/86)
+  - Thread Safety (enabled)
+2- Download and install ImageMagick for Windows
+   https://www.imagemagick.org/script/download.php#windows
+
+3- Download Imagick for PHP
+  https://pecl.php.net/package/imagick/3.7.0/windows
+  - copy php_imagick.dll and pass into C:\xampp\php\ext
+  - open php.ini (Dynamic Extensions)
+    extension=php_imagick.dll
+
+4- Download required Imagick binaries
+  https://windows.php.net/downloads/pecl/deps/
+  - copy all CORE_* and IM_MOD_* file and pass into C:\xampp\apache\bin
