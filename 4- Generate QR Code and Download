@@ -1,0 +1,59 @@
+Step 1:  Create Laravel Project
+  composer create-project --prefer-dist laravel/laravel l9_qrcode
+  or 
+  laravel new l9_qrcode
+Step 2 : Install Package and Configure
+
+  composer require simplesoftwareio/simple-qrcode
+  
+  Open config/app.php file and put the code like below:
+    'providers' => [
+      ....
+      SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+    ],
+
+    'aliases' => [
+      ....
+      'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+    ],
+Step 3 : Basic Usage
+   - The basic syntax is:
+      QrCode::size(100)->generate('Hello Qr Code');
+    
+   - Size: We can set the size of the QR code image.
+    
+      QrCode::size(300)->generate('Hello Qr Code');
+    
+   - Color: We can also set background color.
+      QrCode::size(250)->backgroundColor(255,255,204)->generate('Hello Qr Code');
+
+ Step 4 : create controller: Qrcontroller
+    - write function:
+      function generate(){
+          return view('qrcode');
+      }
+ Step 5: create route
+ 
+    Route::get('generate',[Qrcontroller::class,'generate']);
+    
+ Step 6 : Generate in Blade File   
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <title>Laravel QR Code Example</title>
+    </head>
+    <body>
+
+    <div class="text-center" style="margin-top: 50px;">
+        <h3>Laravel QR Code Example</h3>
+        <div>
+            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('Generate any QR Code!')) !!} ">
+        </div>
+       <div> <a href="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(300)->generate('Generate any QR Code!')) !!} " download>Downloads</a></div>
+        <p>My Qr Code</p>
+    </div>
+
+    </body>
+    </html>
+    
