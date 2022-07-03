@@ -1,3 +1,5 @@
+Before you start this project, you need to make sure that you installed imagick already.
+
 Step 1:  Create Laravel Project
   composer create-project --prefer-dist laravel/laravel l9_qrcode
   or 
