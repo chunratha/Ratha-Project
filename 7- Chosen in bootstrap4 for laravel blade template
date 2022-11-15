@@ -1,1 +1,43 @@
+1- create laravel project names laravel_chosen
+  composer create-project laravel/laravel laravel_chosen
+2- run the project
+  php artisan serve
+3- Download chosen-pluging and pass it into public folder in your project
+4- Change some in welcome.blade.php
+  - Import this file between header
+   <head>
+    <link href="{{ asset('chosen-plugin/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('chosen-plugin/jquery-3.3.1.slim.min.js') }}"></script>
+    <script src="{{ asset('chosen-plugin/popper.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('chosen-plugin/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('chosen-plugin/chosen.jquery.min.js') }}" crossorigin="anonymous"></script>
+    <link href="{{ asset('chosen-plugin/component-chosen.css') }}" rel="stylesheet">
+    <link href="{{ asset('chosen-plugin/component-chosen.min.css') }}" rel="stylesheet">
+  </head>
+ - Write this code in body tag
+ 
+ <div class="card">
+        <div class="card-body">
+            <div>
+                <label for="password" class="form-label">Role</label>
+                <select id="single" class="form-control form-control-chosen" data-placeholder="Please select...">
+                    <option></option>
+                    <option>Option One</option>
+                    <option>Option Two</option>
+                    <option>Option Three</option>
+                    <option>Option Four</option>
+                    <option>Option Six</option>
+                    <option>Option Seven</option>
+                    <option>Option Eight</option>
+                </select>
+            </div>
+        </div>
+    </div>
+5- 
+<script type="text/javascript">
+    $(document).ready(function() {
 
+        $('.form-control-chosen').chosen({});
+
+    });
+</script>
